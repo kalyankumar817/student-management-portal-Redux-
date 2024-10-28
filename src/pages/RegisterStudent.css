@@ -1,0 +1,47 @@
+.reg-form {
+    border: 2px solid orange;
+    max-width: 400px; /* Set a maximum width for the form */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px; /* Add some padding inside the form */
+    border-radius: 8px; /* Add rounded corners */
+    background-color: #f9f9f9; /* Light background for better visibility */
+}
+
+.reg-form div {
+    margin-bottom: 15px; /* Space between form fields */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack labels and inputs vertically */
+}
+
+.reg-form label {
+    margin-bottom: 5px; /* Space between label and input */
+}
+
+.reg-form input {
+    padding: 10px; /* Add padding inside input fields */
+    border-radius: 5px; /* Rounded corners for input fields */
+    border: 1px solid #ccc; /* Light border for input fields */
+    width: 100%; /* Make input fields take full width */
+    box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+.btn {
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+    padding: 10px 15px; /* Add padding to the button */
+    border: none; /* Remove default border */
+    cursor: pointer; /* Change cursor to pointer */
+    width: 100%; /* Make button full width */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 480px) {
+    .reg-form {
+        max-width: 90%; /* Use more width on very small screens */
+    }
+
+    .reg-btn {
+        padding: 12px; /* Slightly increase button padding */
+    }
+}

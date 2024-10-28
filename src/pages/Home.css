@@ -1,0 +1,64 @@
+.home-container {
+    border: 4px solid red;
+    max-width: 600px;
+    width: 100%;
+    height: 100px;
+    margin: 100px auto; /* Centering the container horizontally */
+    padding: 20px; /* Adding some padding */
+    text-align: center; /* Centering the text and buttons */
+    box-shadow:0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.reg-btn, .view-btn {
+    padding: 10px 20px; /* Increased padding for better touch targets */
+    margin: 10px; /* Added margin to separate buttons */
+    border: none; /* Removing default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Changing cursor to pointer */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Button styles */
+.reg-btn {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.view-btn {
+    background-color: #008CBA; /* Blue */
+    color: white;
+}
+
+/* Adding hover effects */
+.reg-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.view-btn:hover {
+    background-color: #007B9E; /* Darker blue on hover */
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .home-container {
+        margin-top: 50px; /* Reduced top margin */
+        padding: 15px; /* Adjusted padding */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .reg-btn, .view-btn {
+        width: 100%; /* Full width buttons on smaller screens */
+        margin-left: 0; /* Remove left margin */
+    }
+}
+
+@media (max-width: 480px) {
+    .home-container {
+        margin-top: 20px; /* Further reduced top margin */
+        padding: 10px; /* Adjusted padding */
+    }
+
+    .reg-btn, .view-btn {
+        font-size: 16px; /* Slightly smaller font size */
+    }
+}

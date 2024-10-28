@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.brand {
+  color: yellow;
+  margin-left: 10px;
+}
+
+.nav-links {
+  display: flex; /* Default display for desktop */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 0 45px; /* Space between nav items */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  color: blue; /* Color on hover */
+}
+
+.nav-links a.active {
+  color: green; /* Active link color */
+}
+
+/* Toggle button styles */
+.toggle-button {
+  display: none; /* Hidden by default on larger screens */
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  color: white; /* Text color */
+  font-size: 24px; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  margin-right: 20px; /* Space to the right */
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide links by default on smaller screens */
+    flex-direction: column; /* Stack links vertically */
+    width: 100%; /* Full width */
+    background-color: black; /* Background color for dropdown */
+    position: absolute; /* Position dropdown */
+    top: 50px; /* Position below navbar */
+    left: 0; /* Align to the left */
+    z-index: 1; /* Ensure it is above other content */
+  }
+
+  .nav-links.active {
+    display: flex; /* Show links when active */
+  }
+
+  .toggle-button {
+    display: block; /* Show toggle button on smaller screens */
+  }
+}
